@@ -11,44 +11,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(children: [
       Column(children: [
-        Container(
-          height: MediaQuery.of(context).size.height * .34,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/images/homepage-image.png"),
-                fit: BoxFit.cover),
-          ),
-          child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Row(
-                  spacing: 20,
-                  crossAxisAlignment: CrossAxisAlignment.baseline,
-                  textBaseline: TextBaseline.alphabetic,
-                  children: [
-                    Container(
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/profile.png"),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                      child: Text(
-                        "Olivia Wilson",
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                    ),
-                  ]),
-            ),
-          ),
-        ),
+        Image.asset("assets/images/homepage-image.png",
+            height: MediaQuery.of(context).size.height * .34,
+            fit: BoxFit.cover),
         Container(
           padding: const EdgeInsets.all(18.0),
           decoration: BoxDecoration(
@@ -272,6 +237,33 @@ class HomeScreen extends StatelessWidget {
         ),
       ]),
       Positioned(
+        top: MediaQuery.of(context).size.height * .07,
+        left: MediaQuery.of(context).size.height * .025,
+        child: Row(children: [
+          Container(
+            height: 40,
+            width: 40,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                image: AssetImage("assets/images/profile.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            child: Text(
+              "Olivia Wilson",
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+          ),
+        ]),
+      ),
+      Positioned(
         top: MediaQuery.of(context).size.height * .26,
         left: MediaQuery.of(context).size.height * .025,
         right: MediaQuery.of(context).size.height * .025,
@@ -289,8 +281,11 @@ class HomeScreen extends StatelessWidget {
                   height: 6,
                 ),
                 Text(
-                  "US \$8,323.12",
-                  style: Theme.of(context).textTheme.titleLarge,
+                  "US\$8,323.12",
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .copyWith(letterSpacing: 1),
                 ),
               ]),
             ],
