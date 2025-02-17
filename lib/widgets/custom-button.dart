@@ -24,11 +24,11 @@ class CustomButton extends StatelessWidget {
     return MaterialButton(
       minWidth: width ?? MediaQuery.of(context).size.width,
       onPressed: onPressed,
-      color: color ?? AppColors.buttonbg,
+      color: color ?? AppColors.buttonBg,
       shape: OutlineInputBorder(
         borderRadius: BorderRadius.circular(32),
         borderSide: BorderSide(
-          color: borderColor ?? AppColors.buttonbg,
+          color: borderColor ?? AppColors.buttonBg,
         ),
       ),
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),

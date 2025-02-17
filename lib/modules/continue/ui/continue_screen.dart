@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../utils/theme/colors.dart';
+import '../../../widgets/custom-button.dart';
+import '../../../widgets/custom-container.dart';
 import '../../loan/ui/loan_step_one.dart';
-import '../../../UI/widgets/custom-button.dart';
-import '../../../UI/widgets/grey-container.dart';
 
 class ContinueScreen extends StatelessWidget {
   const ContinueScreen({super.key});
@@ -43,7 +43,7 @@ class ContinueScreen extends StatelessWidget {
               SizedBox(
                 height: 32,
               ),
-              GreyContainer(
+              CustomContainer(
                 leading: Row(
                   children: [
                     ClipOval(
@@ -69,7 +69,7 @@ class ContinueScreen extends StatelessWidget {
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyMedium!
-                                .copyWith(color: AppColors.greybg)),
+                                .copyWith(color: AppColors.greyBg)),
                         SizedBox(
                           height: 2,
                         ),
