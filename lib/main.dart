@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'modules/home/homepage.dart';
+import 'utils/constants/string_constants.dart';
 import 'utils/theme/theme.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Practical 4',
+      title: StringConstants.projectTitle,
       theme: lightTheme,
       home: const HomePage(),
     );

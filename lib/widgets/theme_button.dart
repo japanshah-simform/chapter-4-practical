@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 
 import '../../utils/theme/colors.dart';
 
-class CustomButton extends StatelessWidget {
-  const CustomButton(
-      {super.key,
-      required this.onPressed,
-      this.color,
-      this.borderColor,
-      required this.child,
-      this.textColor,
-      this.width});
+class ThemeButton extends StatelessWidget {
+  const ThemeButton({
+    super.key,
+    required this.onPressed,
+    this.color,
+    this.borderColor,
+    required this.child,
+    this.textColor,
+    this.width,
+  });
 
-  final Function() onPressed;
+  final VoidCallback onPressed;
   final Color? color;
   final Color? borderColor;
   final Widget child;
@@ -35,8 +36,9 @@ class CustomButton extends StatelessWidget {
       textColor: textColor ?? Colors.white,
       elevation: 0,
       child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-          child: child),
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: child,
+      ),
     );
   }
 }

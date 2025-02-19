@@ -14,6 +14,9 @@ class AppColors {
   static const Color greyBg = Color(0xff6b6a6e);
   static const Color lightGreyBg = Color(0xfff6f5f7);
 
+  static const Color yellowBg = Color(0xfffae88c);
+  static const Color pink = Color(0xffffedef);
+
   static const Color buttonBg = Color(0xff9758c4);
   static const Color buttonBorder = Color(0xff9758c4);
 
